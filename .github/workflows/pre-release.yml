@@ -19,10 +19,10 @@ jobs:
           metadata-file-path: '.github/project.yml'
 
       - name: Validate version
-          if: contains(steps.metadata.outputs.current-version, 'SNAPSHOT')
-          run: |
-            echo '::error::Cannot release a SNAPSHOT version.'
-            exit 1
+        if: contains(steps.metadata.outputs.current-version, 'SNAPSHOT')
+        run: |
+          echo '::error::Cannot release a SNAPSHOT version.'
+          exit 1
 
       - uses: radcortez/milestone-review-action@master
         name: milestone review
