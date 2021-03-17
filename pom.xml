@@ -55,7 +55,7 @@
             <dependency>
                 <groupId>io.smallrye.common</groupId>
                 <artifactId>smallrye-common-constraint</artifactId>
-                <version>1.0.2</version>
+                <version>1.5.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
