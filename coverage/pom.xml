@@ -16,6 +16,11 @@
     <name>SmallRye: Testing Coverage</name>
 
     <dependencies>
+        <dependency>
+            <groupId>io.smallrye.testing</groupId>
+            <artifactId>smallrye-testing-utilities</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
