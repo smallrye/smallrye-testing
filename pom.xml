@@ -18,7 +18,7 @@
     <url>http://smallrye.io</url>
 
     <properties>
-        <version.smallrye.common>1.8.0</version.smallrye.common>
+        <version.smallrye.common>1.10.0</version.smallrye.common>
 
         <version.jboss.logmanager>2.1.18.Final</version.jboss.logmanager>
     </properties>
