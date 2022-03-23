@@ -9,8 +9,7 @@
     </parent>
 
     <artifactId>smallrye-testing-utilities</artifactId>
-
-    <name>SmallRye: Testing Utilities</name>
+    <name>SmallRye Testing: Utilities</name>
 
     <dependencies>
         <dependency>

@@ -13,7 +13,7 @@
     <artifactId>smallrye-testing-coverage</artifactId>
     <packaging>pom</packaging>
 
-    <name>SmallRye: Testing Coverage</name>
+    <name>SmallRye Testing: Coverage</name>
 
     <dependencies>
         <dependency>
