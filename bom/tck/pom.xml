@@ -15,7 +15,7 @@
 
     <properties>
         <version.arquillian>1.6.0.Final</version.arquillian>
-        <version.arquillian.weld-embedded>2.1.0.Final</version.arquillian.weld-embedded>
+        <version.arquillian.weld-embedded>3.0.2.Final</version.arquillian.weld-embedded>
         <version.arquillian.wildfly>3.0.1.Final</version.arquillian.wildfly>
     </properties>
 
