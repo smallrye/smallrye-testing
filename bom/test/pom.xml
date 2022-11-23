@@ -24,7 +24,7 @@
 
         <version.weld.api>3.1.Final</version.weld.api>
         <version.weld.core>3.1.7.SP1</version.weld.core>
-        <version.weld.junit>2.0.2.Final</version.weld.junit>
+        <version.weld.junit>4.0.0.Final</version.weld.junit>
     </properties>
 
     <dependencyManagement>
