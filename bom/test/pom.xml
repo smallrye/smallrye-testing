@@ -22,7 +22,7 @@
         <version.rest-assured>4.5.1</version.rest-assured>
         <version.testcontainers>1.17.6</version.testcontainers>
 
-        <version.weld.api>3.1.Final</version.weld.api>
+        <version.weld.api>4.0.Final</version.weld.api>
         <version.weld.core>3.1.7.SP1</version.weld.core>
         <version.weld.junit>2.0.2.Final</version.weld.junit>
     </properties>
