@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.smallrye.testing</groupId>
         <artifactId>smallrye-testing-parent</artifactId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>2.1.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -14,9 +14,9 @@
     <name>SmallRye Testing: BOM TCK</name>
 
     <properties>
-        <version.arquillian>1.6.0.Final</version.arquillian>
-        <version.arquillian.weld-embedded>2.1.0.Final</version.arquillian.weld-embedded>
-        <version.arquillian.wildfly>3.0.1.Final</version.arquillian.wildfly>
+        <version.arquillian>1.7.0.Alpha13</version.arquillian>
+        <version.arquillian.weld-embedded>3.0.2.Final</version.arquillian.weld-embedded>
+        <version.arquillian.wildfly>5.0.0.Alpha6</version.arquillian.wildfly>
     </properties>
 
     <dependencyManagement>
