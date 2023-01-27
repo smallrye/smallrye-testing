@@ -14,9 +14,23 @@
     <name>SmallRye Testing: BOM TCK</name>
 
     <properties>
-        <version.arquillian>1.6.0.Final</version.arquillian>
+        <!-- Arquillian -->
+        <version.arquillian>1.7.0.Alpha13</version.arquillian>
         <version.arquillian.weld-embedded>2.1.0.Final</version.arquillian.weld-embedded>
         <version.arquillian.wildfly>3.0.1.Final</version.arquillian.wildfly>
+        <version.arquillian.jetty>1.0.0.Final</version.arquillian.jetty>
+
+        <!-- Jetty -->
+        <version.jetty>9.4.49.v20220914</version.jetty>
+
+        <!-- MicroProfile -->
+        <version.jakarta.annotation>2.0.0</version.jakarta.annotation>
+        <version.jakarta.cdi>3.0.0</version.jakarta.cdi>
+        <version.jakarta.ws-rs>3.0.0</version.jakarta.ws-rs>
+        <version.jakarta.jsonp>2.0.0</version.jakarta.jsonp>
+        <version.jakarta.jsonb>2.0.0</version.jakarta.jsonb>
+        <version.weld>3.1.7.SP1</version.weld>
+        <version.resteasy>4.7.7.Final</version.resteasy>
     </properties>
 
     <dependencyManagement>
@@ -37,11 +51,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Arquillian JUnit 5 -->
+            <dependency>
+                <groupId>org.jboss.arquillian.junit5</groupId>
+                <artifactId>arquillian-junit5-container</artifactId>
+                <version>${version.arquillian}</version>
+            </dependency>
+
+            <!-- Arquillian TestNG -->
             <dependency>
                 <groupId>org.jboss.arquillian.testng</groupId>
                 <artifactId>arquillian-testng-container</artifactId>
                 <version>${version.arquillian}</version>
-                <scope>test</scope>
             </dependency>
 
             <!-- Arquillian with Weld -->
@@ -49,7 +71,6 @@
                 <groupId>org.jboss.arquillian.container</groupId>
                 <artifactId>arquillian-weld-embedded</artifactId>
                 <version>${version.arquillian.weld-embedded}</version>
-                <scope>test</scope>
             </dependency>
 
             <!-- Arquillian with Wildfly Managed -->
@@ -57,7 +78,68 @@
                 <groupId>org.wildfly.arquillian</groupId>
                 <artifactId>wildfly-arquillian-container-managed</artifactId>
                 <version>${version.arquillian.wildfly}</version>
-                <scope>test</scope>
+            </dependency>
+
+            <!-- Arquillian with Jetty -->
+            <dependency>
+                <groupId>org.jboss.arquillian.container</groupId>
+                <artifactId>arquillian-jetty-embedded-9</artifactId>
+                <version>${version.arquillian.jetty}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-bom</artifactId>
+                <version>${version.jetty}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Jakarta Core Profile -->
+            <dependency>
+                <groupId>jakarta.annotation</groupId>
+                <artifactId>jakarta.annotation-api</artifactId>
+                <version>${version.jakarta.annotation}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.enterprise</groupId>
+                <artifactId>jakarta.enterprise.cdi-api</artifactId>
+                <version>${version.jakarta.cdi}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.ws.rs</groupId>
+                <artifactId>jakarta.ws.rs-api</artifactId>
+                <version>${version.jakarta.ws-rs}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.json</groupId>
+                <artifactId>jakarta.json-api</artifactId>
+                <version>${version.jakarta.jsonp}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.json.bind</groupId>
+                <artifactId>jakarta.json.bind-api</artifactId>
+                <version>${version.jakarta.jsonb}</version>
+            </dependency>
+            <!-- Weld -->
+            <dependency>
+                <groupId>org.jboss.weld.servlet</groupId>
+                <artifactId>weld-servlet-core</artifactId>
+                <version>${version.weld}</version>
+            </dependency>
+            <!-- RESTEasy -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-bom</artifactId>
+                <version>${version.resteasy}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Internal -->
+            <dependency>
+                <groupId>io.smallrye.testing</groupId>
+                <artifactId>smallrye-testing-tck-jetty</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

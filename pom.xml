@@ -45,6 +45,7 @@
         <module>utilities</module>
         <module>bom/test</module>
         <module>bom/tck</module>
+        <module>tck/jetty</module>
     </modules>
 
     <dependencyManagement>
