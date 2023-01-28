@@ -12,6 +12,10 @@
     <artifactId>smallrye-testing-tck-jetty</artifactId>
     <name>SmallRye Testing: TCK Jetty</name>
 
+    <properties>
+        <artifactId.arquillian.jetty>arquillian-jetty-embedded-9</artifactId.arquillian.jetty>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -50,7 +54,7 @@
         <!-- Jetty -->
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-jetty-embedded-9</artifactId>
+            <artifactId>${artifactId.arquillian.jetty}</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -107,6 +111,19 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-json-binding-provider</artifactId>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.arquillian.junit5</groupId>
+            <artifactId>arquillian-junit5-container</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
