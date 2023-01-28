@@ -31,7 +31,7 @@
         <version.jakarta.jsonp>1.1.6</version.jakarta.jsonp>
         <version.jakarta.jsonb>1.0.2</version.jakarta.jsonb>
         <version.weld>3.1.7.SP1</version.weld>
-        <version.resteasy>4.7.7.Final</version.resteasy>
+        <version.resteasy>6.2.2.Final</version.resteasy>
     </properties>
 
     <dependencyManagement>
