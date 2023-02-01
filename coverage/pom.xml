@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.smallrye.testing</groupId>
         <artifactId>smallrye-testing-parent</artifactId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>1.2.0</version>
     </parent>
 
     <artifactId>smallrye-testing-coverage</artifactId>
