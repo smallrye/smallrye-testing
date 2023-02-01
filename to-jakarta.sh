@@ -4,7 +4,7 @@ sed -i '' 's/smallrye-parent/smallrye-jakarta-parent/g' pom.xml
 
 find . -type f -name '*.java' -exec sed -i '' 's/javax./jakarta./g' {} +
 
-mvn build-helper:parse-version versions:set -DnewVersion=2.1.0-SNAPSHOT
+mvn build-helper:parse-version versions:set -DnewVersion=2.2.0-SNAPSHOT
 mvn -ntp versions:set-property -Dproperty=version.smallrye.common -DnewVersion=2.0.0
 
 mvn -ntp versions:set-property -Dproperty=version.testng -DnewVersion=7.6.0
