@@ -15,9 +15,9 @@
 
     <properties>
         <!-- Arquillian -->
-        <version.arquillian>1.7.0.Alpha13</version.arquillian>
-        <version.arquillian.weld-embedded>3.0.1.Final</version.arquillian.weld-embedded>
-        <version.arquillian.wildfly>5.0.0.Alpha2</version.arquillian.wildfly>
+        <version.arquillian>1.7.0.Alpha14</version.arquillian>
+        <version.arquillian.weld-embedded>3.0.2.Final</version.arquillian.weld-embedded>
+        <version.arquillian.wildfly>5.0.0.Alpha6</version.arquillian.wildfly>
         <version.arquillian.jetty>1.0.0.Final</version.arquillian.jetty>
         <artifactId.arquillian.jetty>arquillian-jetty-embedded-11</artifactId.arquillian.jetty>
 
@@ -25,13 +25,15 @@
         <version.jetty>11.0.7</version.jetty>
 
         <!-- MicroProfile -->
-        <version.jakarta.annotation>2.0.0</version.jakarta.annotation>
-        <version.jakarta.cdi>3.0.0</version.jakarta.cdi>
-        <version.jakarta.ws-rs>3.0.0</version.jakarta.ws-rs>
-        <version.jakarta.jsonp>2.0.0</version.jakarta.jsonp>
-        <version.jakarta.jsonb>2.0.0</version.jakarta.jsonb>
-        <version.weld>4.0.3.Final</version.weld>
-        <version.resteasy>6.0.0.Final</version.resteasy>
+        <version.jakarta.annotation>2.1.1</version.jakarta.annotation>
+        <version.jakarta.cdi>4.0.1</version.jakarta.cdi>
+        <version.jakarta.ws-rs>3.1.0</version.jakarta.ws-rs>
+        <version.jakarta.jsonp>2.1.0</version.jakarta.jsonp>
+        <version.jakarta.jsonb>3.0.0</version.jakarta.jsonb>
+        <version.weld>5.1.0.Final</version.weld>
+        <version.resteasy>6.2.2.Final</version.resteasy>
+        <version.parsson>1.1.1</version.parsson>
+        <version.yasson>3.0.2</version.yasson>
     </properties>
 
     <dependencyManagement>
@@ -134,6 +136,18 @@
                 <version>${version.resteasy}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- JSON-P -->
+            <dependency>
+                <groupId>org.eclipse.parsson</groupId>
+                <artifactId>parsson</artifactId>
+                <version>${version.parsson}</version>
+            </dependency>
+            <!-- JSON-B -->
+            <dependency>
+                <groupId>org.eclipse</groupId>
+                <artifactId>yasson</artifactId>
+                <version>${version.yasson}</version>
             </dependency>
 
             <!-- Internal -->
