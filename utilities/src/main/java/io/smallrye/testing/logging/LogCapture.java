@@ -43,7 +43,7 @@ public class LogCapture implements BeforeAllCallback {
     }
 
     @Override
-    public void beforeAll(ExtensionContext context) throws Exception {
+    public void beforeAll(ExtensionContext context) {
         rootLogger.addHandler(inMemoryLogHandler);
     }
 
