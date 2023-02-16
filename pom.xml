@@ -4,8 +4,8 @@
 
     <parent>
         <groupId>io.smallrye</groupId>
-        <artifactId>smallrye-jakarta-parent</artifactId>
-        <version>38</version>
+        <artifactId>smallrye-parent</artifactId>
+        <version>39</version>
     </parent>
 
     <groupId>io.smallrye.testing</groupId>
@@ -17,8 +17,6 @@
     <url>http://smallrye.io</url>
 
     <properties>
-        <version.smallrye.common>2.0.0</version.smallrye.common>
-
         <version.jboss.logmanager>2.1.19.Final</version.jboss.logmanager>
     </properties>
 
@@ -50,12 +48,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>io.smallrye.common</groupId>
-                <artifactId>smallrye-common-constraint</artifactId>
-                <version>${version.smallrye.common}</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.jboss.logmanager</groupId>
                 <artifactId>jboss-logmanager</artifactId>

@@ -7,12 +7,12 @@ import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
-import io.smallrye.common.constraint.Assert;
-
 public class InMemoryLogHandler extends Handler {
 
     public InMemoryLogHandler(Predicate<LogRecord> predicate) {
-        Assert.checkNotNullParam("predicate", predicate);
+        if (predicate == null) {
+            throw new IllegalArgumentException("Parameter 'predicate' may not be null");
+        }
         setFilter(predicate::test);
         setLevel(Level.FINE);
     }
