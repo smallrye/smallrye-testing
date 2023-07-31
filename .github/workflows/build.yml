@@ -36,7 +36,20 @@ jobs:
           java-version: ${{matrix.java}}
 
       - name: build with maven
-        run: mvn -B formatter:validate verify --file pom.xml
+        run: mvn -B formatter:validate install --file pom.xml
+
+      - uses: actions/checkout@v2
+        name: checkout smallrye-config
+        with:
+          repository: smallrye/smallrye-config
+          path: smallrye-config
+
+      - name: test with smallrye-config
+        run: |
+          cd smallrye-config
+          mvn versions:update-property -Dproperty=version.smallrye.testing -DallowSnapshots=true -N
+          git diff pom.xml
+          mvn install
 
   quality:
     needs: [build]
