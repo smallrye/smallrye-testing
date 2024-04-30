@@ -17,7 +17,7 @@
     <url>http://smallrye.io</url>
 
     <properties>
-        <version.jboss.logmanager>3.0.0.Final</version.jboss.logmanager>
+        <version.jboss.logmanager>3.0.5.Final</version.jboss.logmanager>
     </properties>
 
     <licenses>
