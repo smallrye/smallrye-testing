@@ -13,6 +13,7 @@ public class DeploymentProcessor implements ApplicationArchiveProcessor {
         if (archive instanceof WebArchive) {
             WebArchive war = (WebArchive) archive;
             war.addAsWebInfResource("beans.xml");
+            war.addAsWebInfResource("jetty-env.xml");
             war.addAsLibraries(
                     ShrinkWrap.create(JavaArchive.class, "resteasy-cdi.jar").addAsManifestResource("web-fragment.xml"));
         }

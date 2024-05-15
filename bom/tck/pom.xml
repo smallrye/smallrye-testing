@@ -18,11 +18,11 @@
         <version.arquillian>1.8.0.Final</version.arquillian>
         <version.arquillian.weld-embedded>4.0.0.Final</version.arquillian.weld-embedded>
         <version.arquillian.wildfly>5.0.1.Final</version.arquillian.wildfly>
-        <version.arquillian.jetty>1.0.0.Final</version.arquillian.jetty>
-        <artifactId.arquillian.jetty>arquillian-jetty-embedded-11</artifactId.arquillian.jetty>
+        <version.arquillian.jetty>2.0.0.Final</version.arquillian.jetty>
+        <artifactId.arquillian.jetty>arquillian-jetty-embedded-12-ee9</artifactId.arquillian.jetty>
 
         <!-- Jetty -->
-        <version.jetty>11.0.24</version.jetty>
+        <version.jetty>12.0.9</version.jetty>
         <version.slf4j>2.0.16</version.slf4j>
 
         <!-- MicroProfile -->
@@ -31,7 +31,7 @@
         <version.jakarta.ws-rs>3.1.0</version.jakarta.ws-rs>
         <version.jakarta.jsonp>2.1.0</version.jakarta.jsonp>
         <version.jakarta.jsonb>3.0.0</version.jakarta.jsonb>
-        <version.weld>5.1.0.Final</version.weld>
+        <version.weld>5.1.2.Final</version.weld>
         <version.resteasy>6.2.2.Final</version.resteasy>
         <version.parsson>1.1.7</version.parsson>
         <version.yasson>3.0.4</version.yasson>
@@ -93,6 +93,13 @@
             <dependency>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-bom</artifactId>
+                <version>${version.jetty}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty.ee9</groupId>
+                <artifactId>jetty-ee9-bom</artifactId>
                 <version>${version.jetty}</version>
                 <type>pom</type>
                 <scope>import</scope>
