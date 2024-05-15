@@ -18,6 +18,9 @@
 
     <properties>
         <version.jboss.logmanager>3.0.6.Final</version.jboss.logmanager>
+
+        <!-- Sonar settings -->
+        <sonar.projectName>SmallRye Testing</sonar.projectName>
     </properties>
 
     <licenses>
