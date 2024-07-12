@@ -23,6 +23,7 @@
 
         <!-- Jetty -->
         <version.jetty>11.0.7</version.jetty>
+        <version.slf4j>2.0.13</version.slf4j>
 
         <!-- MicroProfile -->
         <version.jakarta.annotation>2.1.1</version.jakarta.annotation>
@@ -95,6 +96,16 @@
                 <version>${version.jetty}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-jdk14</artifactId>
+                <version>${version.slf4j}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${version.slf4j}</version>
             </dependency>
 
             <!-- Jakarta Core Profile -->

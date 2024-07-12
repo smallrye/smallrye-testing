@@ -12,10 +12,6 @@
     <artifactId>smallrye-testing-tck-jetty</artifactId>
     <name>SmallRye Testing: TCK Jetty</name>
 
-    <properties>
-        <artifactId.arquillian.jetty>arquillian-jetty-embedded-11</artifactId.arquillian.jetty>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -54,7 +50,7 @@
         <!-- Jetty -->
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>${artifactId.arquillian.jetty}</artifactId>
+            <artifactId>arquillian-jetty-embedded-11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -111,6 +107,16 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-json-binding-provider</artifactId>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
 
         <!-- Test -->
