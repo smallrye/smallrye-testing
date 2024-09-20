@@ -22,7 +22,7 @@
         <artifactId.arquillian.jetty>arquillian-jetty-embedded-11</artifactId.arquillian.jetty>
 
         <!-- Jetty -->
-        <version.jetty>11.0.7</version.jetty>
+        <version.jetty>11.0.24</version.jetty>
         <version.slf4j>2.0.16</version.slf4j>
 
         <!-- MicroProfile -->
