@@ -50,19 +50,31 @@
         <!-- Jetty -->
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-jetty-embedded-11</artifactId>
+            <artifactId>arquillian-jetty-embedded-12-ee9</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
+            <artifactId>jetty-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-deploy</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-annotations</artifactId>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-webapp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-plus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.ee9</groupId>
+            <artifactId>jetty-ee9-cdi</artifactId>
         </dependency>
 
         <!-- MicroProfile -->
@@ -132,5 +144,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
