@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.smallrye</groupId>
         <artifactId>smallrye-parent</artifactId>
-        <version>47</version>
+        <version>48</version>
     </parent>
 
     <groupId>io.smallrye.testing</groupId>
@@ -17,9 +17,6 @@
     <url>http://smallrye.io</url>
 
     <properties>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-
         <version.jboss.logmanager>3.1.2.Final</version.jboss.logmanager>
 
         <!-- Sonar settings -->

@@ -24,8 +24,8 @@
         <version.testng>7.6.0</version.testng>
 
         <version.weld.api>5.0.SP3</version.weld.api>
-        <version.weld.core>5.1.0.Final</version.weld.core>
-        <version.weld.junit>4.0.0.Final</version.weld.junit>
+        <version.weld.core>5.1.6.Final</version.weld.core>
+        <version.weld.junit>4.0.5.Final</version.weld.junit>
     </properties>
 
     <dependencyManagement>
@@ -41,20 +41,20 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>${version.junit5}</version>
+                <version>${version.junit}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
-                <version>${version.junit5}</version>
+                <version>${version.junit}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.vintage</groupId>
                 <artifactId>junit-vintage-engine</artifactId>
-                <version>${version.junit5}</version>
+                <version>${version.junit}</version>
                 <scope>test</scope>
             </dependency>
 
