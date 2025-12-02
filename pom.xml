@@ -110,5 +110,16 @@
                 <module>coverage</module>
             </modules>
         </profile>
+        <profile>
+            <id>sonar</id>
+            <properties>
+                <sonar.projectKey>io.smallrye.testing:smallrye-testing</sonar.projectKey>
+                <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
+                <!--suppress UnresolvedMavenProperty -->
+                <sonar.coverage.jacoco.xmlReportPaths>
+                    ${maven.multiModuleProjectDirectory}/coverage/target/site/jacoco-aggregate/jacoco.xml
+                </sonar.coverage.jacoco.xmlReportPaths>
+            </properties>
+        </profile>
     </profiles>
 </project>
