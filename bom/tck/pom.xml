@@ -19,18 +19,15 @@
         <version.arquillian.weld-embedded>4.0.0.Final</version.arquillian.weld-embedded>
         <version.arquillian.wildfly>5.1.0.Final</version.arquillian.wildfly>
         <version.arquillian.jetty>2.0.0.Final</version.arquillian.jetty>
+        <!-- https://github.com/arquillian/arquillian-container-jetty/issues/185 -->
         <artifactId.arquillian.jetty>arquillian-jetty-embedded-12-ee9</artifactId.arquillian.jetty>
 
         <!-- Jetty -->
-        <version.jetty>12.0.9</version.jetty>
+        <version.jetty>12.0.30</version.jetty>
         <version.slf4j>2.0.17</version.slf4j>
 
         <!-- MicroProfile -->
-        <version.jakarta.annotation>2.1.1</version.jakarta.annotation>
-        <version.jakarta.cdi>4.0.1</version.jakarta.cdi>
-        <version.jakarta.ws-rs>3.1.0</version.jakarta.ws-rs>
-        <version.jakarta.jsonp>2.1.0</version.jakarta.jsonp>
-        <version.jakarta.jsonb>3.0.0</version.jakarta.jsonb>
+        <version.jakarta.core>10.0.0</version.jakarta.core>
         <version.weld>5.1.2.Final</version.weld>
         <version.resteasy>6.2.2.Final</version.resteasy>
         <version.parsson>1.1.7</version.parsson>
@@ -117,29 +114,9 @@
 
             <!-- Jakarta Core Profile -->
             <dependency>
-                <groupId>jakarta.annotation</groupId>
-                <artifactId>jakarta.annotation-api</artifactId>
-                <version>${version.jakarta.annotation}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.enterprise</groupId>
-                <artifactId>jakarta.enterprise.cdi-api</artifactId>
-                <version>${version.jakarta.cdi}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.ws.rs</groupId>
-                <artifactId>jakarta.ws.rs-api</artifactId>
-                <version>${version.jakarta.ws-rs}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.json</groupId>
-                <artifactId>jakarta.json-api</artifactId>
-                <version>${version.jakarta.jsonp}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.json.bind</groupId>
-                <artifactId>jakarta.json.bind-api</artifactId>
-                <version>${version.jakarta.jsonb}</version>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-core-api</artifactId>
+                <version>${version.jakarta.core}</version>
             </dependency>
             <!-- Weld -->
             <dependency>
