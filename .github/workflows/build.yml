@@ -54,6 +54,19 @@ jobs:
           git diff pom.xml
           mvn install
 
+      - uses: actions/checkout@v5
+        name: checkout smallrye-opentelemetry
+        with:
+          repository: smallrye/smallrye-opentelemetry
+          path: smallrye-opentelemetry
+
+      - name: test with smallrye-opentelemetry
+        run: |
+          cd smallrye-opentelemetry
+          mvn versions:update-property -Dproperty=version.smallrye.testing -DallowSnapshots=true -N
+          git diff pom.xml
+          mvn install
+
   quality:
     needs: [build]
     if: github.event_name == 'push' && github.repository_owner == 'smallrye'
