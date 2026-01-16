@@ -39,4 +39,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!-- This is needed because we are causing part of JUnit to be on the module path -->
+                    <argLine>
+                        --add-exports=org.junit.platform.commons/org.junit.platform.commons.util=ALL-UNNAMED
+                        --add-exports=org.junit.platform.commons/org.junit.platform.commons.logging=ALL-UNNAMED
+                    </argLine>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -10,8 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 public class LogFilteringTest {
+    // making this public is simpler than --add-opens
     @RegisterExtension
-    static LogCapture logCapture = LogCapture.with(r -> LogFilteringTest.class.getName().equals(r.getLoggerName()));
+    public static LogCapture logCapture = LogCapture.with(r -> LogFilteringTest.class.getName().equals(r.getLoggerName()));
 
     private final Logger logger = Logger.getLogger(LogFilteringTest.class);
     private final Logger anotherLogger = Logger.getLogger("io.smallrye.testing.logging.AnotherLogger");
@@ -20,7 +21,7 @@ public class LogFilteringTest {
     private static final String WARNING = "Writing a warning level message.";
 
     @Test
-    void testFilteredCategory() {
+    public void testFilteredCategory() {
         logger.debug("Writing a debug level message.");
         logger.info(INFO);
         logger.warn(WARNING);
