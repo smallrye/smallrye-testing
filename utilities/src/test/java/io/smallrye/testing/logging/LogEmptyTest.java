@@ -7,13 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 public class LogEmptyTest {
+    // making this public is simpler than --add-opens
     @RegisterExtension
-    static LogCapture logCapture = LogCapture.none();
+    public static LogCapture logCapture = LogCapture.none();
 
     private final Logger logger = Logger.getLogger(LogEmptyTest.class);
 
     @Test
-    void testEmptyLogContent() {
+    public void testEmptyLogContent() {
         logger.debug("Writing a debug level message.");
         logger.info("Writing an info level message.");
         logger.warn("Writing a warning level message.");

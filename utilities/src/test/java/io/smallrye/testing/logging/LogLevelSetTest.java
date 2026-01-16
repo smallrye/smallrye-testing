@@ -11,8 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 public class LogLevelSetTest {
+    // making this public is simpler than --add-opens
     @RegisterExtension
-    static LogCapture logCapture = LogCapture.with(r -> LogLevelSetTest.class.getName().equals(r.getLoggerName()),
+    public static LogCapture logCapture = LogCapture.with(r -> LogLevelSetTest.class.getName().equals(r.getLoggerName()),
             Level.ALL);
 
     private final Logger logger = Logger.getLogger(LogLevelSetTest.class);
@@ -24,7 +25,7 @@ public class LogLevelSetTest {
     private static final String TRACE = "Writing a trace level message.";
 
     @Test
-    void testLogLevelSetting() {
+    public void testLogLevelSetting() {
         logger.debug(DEBUG);
         logger.info(INFO);
         logger.warn(WARNING);
