@@ -21,7 +21,7 @@
             test-containers
         -->
         <!-- Managed by parent to 6, but we still need 5 for weld-junit -->
-        <version.junit>5.14.1</version.junit>
+        <version.junit>6.0.3</version.junit>
         <version.testng>7.6.0</version.testng>
 
         <version.weld.api>5.0.SP3</version.weld.api>
