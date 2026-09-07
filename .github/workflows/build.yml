@@ -60,12 +60,13 @@ jobs:
           repository: smallrye/smallrye-opentelemetry
           path: smallrye-opentelemetry
 
-      - name: test with smallrye-opentelemetry
-        run: |
-          cd smallrye-opentelemetry
-          mvn versions:update-property -Dproperty=version.smallrye.testing -DallowSnapshots=true -N
-          git diff pom.xml
-          mvn install
+#      Requires update to SmallRye OpenTelemetry
+#      - name: test with smallrye-opentelemetry
+#        run: |
+#          cd smallrye-opentelemetry
+#          mvn versions:update-property -Dproperty=version.smallrye.testing -DallowSnapshots=true -N
+#          git diff pom.xml
+#          mvn install
 
   quality:
     needs: [build]
