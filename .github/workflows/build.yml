@@ -87,6 +87,8 @@ jobs:
           cache-dependency-path: '**/pom.xml'
 
       - name: build with docs and coverage
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: | 
           mvn verify -Pcoverage javadoc:javadoc
-          mvn sonar:sonar -Dsonar.projectKey= -Dsonar.token=${{secrets.SONAR_TOKEN}}
+          mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Psonar -Dsonar.token="$SONAR_TOKEN"

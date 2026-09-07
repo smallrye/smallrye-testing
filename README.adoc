@@ -1,8 +1,8 @@
 :ci: https://github.com/smallrye/smallrye-testing/actions/workflows/build.yml?query=branch%3Amain
-:sonar: https://sonarcloud.io/dashboard?id=smallrye_smallrye-testing
+:sonar: https://sonarcloud.io/dashboard?id=io.smallrye.testing%3Asmallrye-testing
 
-image:https://github.com/smallrye/smallrye-testing/workflows/SmallRye%20Build/badge.svg?branch=main[link={ci}]
-image:https://sonarcloud.io/api/project_badges/measure?project=smallrye_smallrye-testing&metric=alert_status["Quality Gate Status", link={sonar}]
+image:https://github.com/smallrye/smallrye-testing/actions/workflows/build.yml/badge.svg[link={ci}]
+image:https://sonarcloud.io/api/project_badges/measure?project=io.smallrye.testing%3Asmallrye-testing&metric=alert_status["Quality Gate Status", link={sonar}]
 image:https://img.shields.io/github/license/smallrye/smallrye-testing.svg["License", link="http://www.apache.org/licenses/LICENSE-2.0"]
 image:https://img.shields.io/maven-central/v/io.smallrye.testing/smallrye-testing-parent?color=green[]
 
