@@ -1,16 +1,21 @@
 name: Update Milestone
 
 on:
-  pull_request_target:
-    types: [closed]
+  push:
+    branches:
+      - main
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
-  release:
+  update:
     runs-on: ubuntu-latest
-    name: pulls
+    name: update-milestone
 
     steps:
-      - uses: radcortez/milestone-set-action@main
+      - uses: smallrye/milestone-set-action@main
         name: milestone set
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
