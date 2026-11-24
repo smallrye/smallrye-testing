@@ -34,23 +34,11 @@
             <groupId>org.jboss.arquillian.container</groupId>
             <artifactId>arquillian-container-test-spi</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.jboss.shrinkwrap</groupId>
-            <artifactId>shrinkwrap-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.shrinkwrap.resolver</groupId>
-            <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.shrinkwrap.resolver</groupId>
-            <artifactId>shrinkwrap-resolver-api-maven</artifactId>
-        </dependency>
 
         <!-- Jetty -->
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
-            <artifactId>arquillian-jetty-embedded-12-ee9</artifactId>
+            <artifactId>arquillian-jetty-embedded-12-1-ee11</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -61,20 +49,20 @@
             <artifactId>jetty-deploy</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee9</groupId>
-            <artifactId>jetty-ee9-webapp</artifactId>
+            <groupId>org.eclipse.jetty.ee11</groupId>
+            <artifactId>jetty-ee11-webapp</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee9</groupId>
-            <artifactId>jetty-ee9-annotations</artifactId>
+            <groupId>org.eclipse.jetty.ee11</groupId>
+            <artifactId>jetty-ee11-annotations</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee9</groupId>
-            <artifactId>jetty-ee9-plus</artifactId>
+            <groupId>org.eclipse.jetty.ee11</groupId>
+            <artifactId>jetty-ee11-plus</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.ee9</groupId>
-            <artifactId>jetty-ee9-cdi</artifactId>
+            <groupId>org.eclipse.jetty.ee11</groupId>
+            <artifactId>jetty-ee11-cdi</artifactId>
         </dependency>
 
         <!-- MicroProfile -->
