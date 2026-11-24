@@ -1,9 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "https://eclipse.dev/jetty/configure_10_0.dtd">
 
-<Configure class="org.eclipse.jetty.ee9.webapp.WebAppContext"> <!--1-->
+<Configure class="org.eclipse.jetty.ee11.webapp.WebAppContext"> <!--1-->
   <Call name="setAttribute">
     <Arg>org.eclipse.jetty.containerInitializerOrder</Arg>
-    <Arg>org.eclipse.jetty.ee9.cdi.CdiServletContainerInitializer, org.jboss.weld.environment.servlet.EnhancedListener, *</Arg>
+    <Arg>org.eclipse.jetty.ee11.cdi.CdiServletContainerInitializer, org.jboss.weld.environment.servlet.EnhancedListener, *</Arg>
+  </Call>
+  <!-- arquillian-jetty-embedded-12-1-ee11 sets the Weld container id to the context path, but CDI.current() only
+       looks up the static Weld instance -->
+  <Call name="setInitParameter">
+    <Arg>WELD_CONTEXT_ID_KEY</Arg>
+    <Arg>STATIC_INSTANCE</Arg>
   </Call>
 </Configure>
